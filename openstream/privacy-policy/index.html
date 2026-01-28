@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | OpenStream</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #F0F4F8;
+            --surface: #FFFFFF;
+            --primary: #006684;
+            --text-main: #191C1E;
+            --text-muted: #41484D;
+            --accent: #00C2FF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--surface);
+            padding: 60px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 2px solid var(--bg);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0;
+            color: var(--primary);
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 40px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "";
+            width: 4px;
+            height: 24px;
+            background: var(--accent);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background: #E1F5FE;
+            padding: 20px;
+            border-radius: 16px;
+            border-left: 4px solid var(--accent);
+            margin: 30px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 30px; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Privacy Policy</h1>
+        <div class="last-updated">Effective Date: January 28, 2026</div>
+    </header>
+
+    <p>Welcome to <strong>OpenStream</strong>. Your privacy is not a feature—it is our foundation. This policy explains how we handle your data (spoiler: we mostly don't).</p>
+
+    <div class="highlight-box">
+        <strong>The TL;DR:</strong> OpenStream does not collect, store, or sell your personal data. There are no accounts, no tracking cookies, and no analytics.
+    </div>
+
+    <h2>1. Data Collection</h2>
+    <p>OpenStream is a decentralized podcast player. We do not require you to create an account, provide an email address, or link any social media profiles. We collect <strong>zero</strong> personal information.</p>
+
+    <h2>2. Local Data Storage</h2>
+    <p>Any data generated through your use of the app stays on your device. This includes:</p>
+    <ul>
+        <li>Your podcast subscriptions.</li>
+        <li>Your playback progress and history.</li>
+        <li>Downloaded audio files.</li>
+        <li>Your search history.</li>
+    </ul>
+    <p>This data is stored in a local database (Room DB) and is never uploaded to our servers.</p>
+
+    <h2>3. Third-Party Services</h2>
+    <p>To provide you with podcast content, the app interacts with the following services:</p>
+    <ul>
+        <li><strong>iTunes Search API:</strong> Used to search the global podcast directory. No user identifiers are sent with these requests.</li>
+        <li><strong>RSS Feeds:</strong> When you play or subscribe to a show, the app connects directly to the podcast creator's host server to fetch audio and metadata.</li>
+    </ul>
+
+    <h2>4. Permissions</h2>
+    <p>The app requests only the permissions necessary for core functionality:</p>
+    <ul>
+        <li><strong>Internet:</strong> To stream audio and fetch show details.</li>
+        <li><strong>Notifications:</strong> To allow you to control playback from your lock screen.</li>
+    </ul>
+
+    <h2>5. Changes to This Policy</h2>
+    <p>We may update this policy occasionally to reflect changes in the app. However, our commitment to "local-first" data will remain unchanged.</p>
+
+    <h2>6. Contact Us</h2>
+    <p>If you have questions about this privacy policy, you can reach out via our GitHub repository.</p>
+
+    <footer>
+        &copy; 2026 OpenStream Project. Built for the open web.
+    </footer>
+</div>
+
+</body>
+</html>
