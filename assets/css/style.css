@@ -127,6 +127,20 @@ nav {
     border-radius: 2px;
 }
 
+.subsection-title {
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.subsection-title i {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
