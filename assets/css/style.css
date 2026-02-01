@@ -6,6 +6,7 @@
     --text-primary: #e0e0e0;
     --text-secondary: #a0a0a0;
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -171,9 +172,22 @@ nav {
 }
 
 .card-icon {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(3, 218, 198, 0.1);
+    border-radius: 50%;
+    margin-bottom: 20px;
     color: var(--secondary-color);
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+    background-color: rgba(3, 218, 198, 0.2);
 }
 
 .card h3 {
@@ -190,15 +204,28 @@ nav {
 .card-links {
     margin-top: auto;
     display: flex;
-    gap: 15px;
-    font-size: 0.9rem;
+    gap: 10px;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
 }
 
 .btn-text {
     font-weight: 600;
     display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-text:hover {
+    background-color: var(--primary-color);
+    color: #121212;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 /* Footer */
@@ -226,11 +253,27 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+    }
+
     .hero h1 {
         font-size: 2.5rem;
     }
     
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
     .nav-links {
-        display: none; /* Simple hiding for now, can be improved with burger menu */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .nav-links a {
+        margin-left: 0;
     }
 }
