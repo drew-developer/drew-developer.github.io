@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You've Been Challenged! | Word Search</title>
+    <meta name="theme-color" content="#FF4081">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Word Search Challenge">
+    <meta property="og:description"
+        content="Can you beat my time? Install the Word Search game to play this unique puzzle!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://drew-developer.github.io/WordSearch/assets/social_preview.png">
+
+    <style>
+        :root {
+            --sunset-purple: #9C27B0;
+            --sunset-pink: #FF4081;
+            --sunset-orange: #FF9800;
+            --dark-bg: #1A1A2E;
+            --card-bg: #FFFFFF;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --card-bg: #2E2E4E;
+                --text-color: #FFFFFF;
+            }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(135deg, var(--sunset-purple), var(--sunset-pink), var(--sunset-orange));
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 24px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            width: 350px;
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        h1 {
+            margin-top: 0;
+            color: var(--text-color, #333);
+            font-size: 24px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 12px;
+            transition: transform 0.2s;
+            box-sizing: border-box;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--sunset-pink), var(--sunset-orange));
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .badge {
+            background-color: #E1F5FE;
+            color: #0288D1;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="card">
+        <div class="badge" id="difficulty-badge">CHALLENGE</div>
+        <h1>Word Search</h1>
+        <p>You've been challenged to beat a high score on this unique puzzle seed!</p>
+
+        <a href="#" id="open-app-btn" class="btn btn-primary">Open in App</a>
+        <a href="https://play.google.com/store/apps/details?id=io.github.drew_developer.wordsearch"
+            class="btn btn-secondary">Download Game</a>
+    </div>
+
+    <script>
+        // Parse Query Params
+        const params = new URLSearchParams(window.location.search);
+        const seed = params.get('seed');
+        const difficulty = params.get('difficulty');
+
+        // Update UI
+        if (difficulty) {
+            document.getElementById('difficulty-badge').innerText = difficulty + " DIFFICULTY";
+        }
+
+        // Construct App Intent Scheme
+        // This tries to open the app directly via custom scheme if installed
+        const appScheme = `wordsearch://challenge?seed=${seed}&difficulty=${difficulty}`;
+        const playStoreUrl = "https://play.google.com/store/apps/details?id=io.github.drew_developer.wordsearch";
+
+        // Deep Link Logic
+        document.getElementById('open-app-btn').href = appScheme;
+
+        // Auto-redirect attempt (gentle)
+        window.onload = function () {
+            // Check if user is on mobile
+            if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                // Attempt to open the app
+                window.location.href = appScheme;
+
+                // Fallback: If nothing happens after 2 seconds, redirect to Store is too aggressive, 
+                // so we just let them stay on this landing page instead.
+            }
+        };
+    </script>
+</body>
+
+</html>
