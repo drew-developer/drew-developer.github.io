@@ -3,58 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | OpenStream</title>
+    <title>Privacy Policy - OpenStream</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }
-        .container { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-        h1 { color: #006684; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #004d63; margin-top: 30px; }
-        .highlight { background-color: #e6f7ff; padding: 15px; border-left: 4px solid #006684; border-radius: 4px; margin: 20px 0; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
-        footer { margin-top: 40px; text-align: center; font-size: 0.9em; color: #777; }
+        :root {
+            --primary: #6200ee;
+            --text-main: #1c1b1f;
+            --text-muted: #49454f;
+            --bg: #fef7ff;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #d0bcff;
+                --text-main: #e6e1e5;
+                --text-muted: #cac4d0;
+                --bg: #1c1b1f;
+            }
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        h1 { color: var(--primary); border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; }
+        h2 { color: var(--primary); margin-top: 2rem; }
+        section { margin-bottom: 1.5rem; }
+        .footer { margin-top: 3rem; font-size: 0.8rem; color: var(--text-muted); text-align: center; }
+        .highlight { font-weight: bold; color: var(--primary); }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <p><strong>Effective Date:</strong> February 3, 2026</p>
+    <h1>🛡️ Privacy Policy</h1>
+    <p><strong>Effective Date:</strong> February 17, 2026</p>
 
-        <section>
-            <h2>1. Our Data Philosophy</h2>
-            <div class="highlight">
-                <strong>"No Logins, No Account Tracking"</strong><br>
-                OpenStream is built with a privacy-first mindset. We do not require, collect, or store any Personally Identifiable Information (PII) such as your name, email address, or phone number.
-            </div>
-        </section>
+    <p>OpenStream ("we", "our", or "the app") is committed to protecting your privacy and ensuring you have complete control over your data. This Privacy Policy describes how we handle information in our decentralized podcast and radio application.</p>
 
-        <section>
-            <h2>2. Local Data Storage & Sovereignty</h2>
-            <p>Your personal app activity remains strictly on your device.</p>
-            <ul>
-                <li><strong>Stored Data:</strong> Your podcast subscriptions, playback history, and downloaded episodes are stored locally.</li>
-                <li><strong>Mechanism:</strong> Data is kept in a secure local database (Room DB) and is never uploaded to our servers.</li>
-                <li><strong>Data Sovereignty:</strong> You own your data. You can use the OPML Export feature at any time to move your subscriptions to any other platform.</li>
-            </ul>
-        </section>
+    <section>
+        <h2>1. 🛡️ Privacy-First Philosophy</h2>
+        <p>OpenStream is built on the principle of <span class="highlight">Data Sovereignty</span>. Our core goal is to provide a premium audio experience without tracking your identity or listening habits.</p>
+        <ul>
+            <li><strong>No Accounts:</strong> We do not require you to create an account, provide an email address, or log in.</li>
+            <li><strong>Local-First Data:</strong> Your subscriptions, listening history, bookmarks, and downloads are stored locally on your device. We do not have access to this information.</li>
+        </ul>
+    </section>
 
-        <section>
-            <h2>3. Technical Analytics & Third-Party Services</h2>
-            <p>To ensure app stability and improve quality, we use a limited set of services:</p>
-            <ul>
-                <li><strong>Firebase Analytics:</strong> We use this to measure app performance and debug crashes. All collected data is strictly anonymized and technical in nature (e.g., installation counts, feature interaction frequency) and cannot be used to identify you personally.</li>
-                <li><strong>Radio-Browser & iTunes API:</strong> We utilize public APIs for radio and podcast discovery. While search queries are sent to these services to provide results, they are not linked to any user identity and are not stored by us.</li>
-            </ul>
-        </section>
+    <section>
+        <h2>2. 📊 Information Collection and Use</h2>
+        <h3>A. Performance and Stability Data</h3>
+        <p>To ensure the app remains healthy and reliable across different devices, we use <strong>Firebase Analytics and Crashlytics</strong>. This data is:</p>
+        <ul>
+            <li><strong>Anonymous:</strong> It does not identify you personally.</li>
+            <li><strong>Technical Focus:</strong> We collect data on app crashes, performance bottlenecks, and general feature usage.</li>
+            <li><strong>Opt-Out:</strong> You can disable this telemetry at any time in the app <span class="highlight">Settings</span>.</li>
+        </ul>
 
-        <section>
-            <h2>4. Data Deletion</h2>
-            <p>You can clear your entire playback history at any time within the app settings. Deleting the OpenStream app will immediately and permanently erase all data associated with the application from your device.</p>
-        </section>
+        <h3>B. Third-Party Services</h3>
+        <ul>
+            <li><strong>Podcast RSS Feeds:</strong> Connecting to feeds provided by creators may expose your IP address to those creators' servers.</li>
+            <li><strong>Radio discovery:</strong> We use the decentralized Radio-Browser.info API.</li>
+            <li><strong>Artwork:</strong> Artwork is fetched directly from source servers.</li>
+        </ul>
+    </section>
 
-        <footer>
-            <p>&copy; 2026 OpenStream. Your Privacy, Your Control.</p>
-        </footer>
+    <section>
+        <h2>3. 💾 Data Retention & Portability</h2>
+        <p>Your data stays on your device as long as the app is installed. You can use <strong>OPML Support</strong> to move your subscriptions elsewhere, and deleting the app removes all local data.</p>
+    </section>
+
+    <section>
+        <h2>4. 👶 Children's Privacy</h2>
+        <p>OpenStream does not collect any personal information from anyone, including children under the age of 13.</p>
+    </section>
+
+    <section>
+        <h2>5. 📬 Contact Us</h2>
+        <p>If you have any questions, please contact the developer via our GitHub repository.</p>
+    </section>
+
+    <div class="footer">
+        &copy; 2026 OpenStream. Decentralized. Private. Open.
     </div>
 </body>
 </html>
