@@ -230,24 +230,21 @@
         const openAppBtn = document.getElementById('open-app-btn');
         const playStoreUrl = "https://play.google.com/store/apps/details?id=io.github.drew_developer.wordsearch";
 
-        // Use Intent URI for Android (more robust than custom schemes alone)
-        const intentUri = `intent://challenge?seed=${seed}&difficulty=${difficulty}#Intent;scheme=wordsearch-challenge;package=io.github.drew_developer.wordsearch;S.browser_fallback_url=${encodeURIComponent(playStoreUrl)};end`;
-        const customScheme = `wordsearch-challenge://challenge?seed=${seed}&difficulty=${difficulty}`;
+        // Use HTTPS-based intent URI (highly reliable as it leverages App Link foundations)
+        const intentUri = `intent://drew-developer.github.io/wordsearch/challenge?seed=${seed}&difficulty=${difficulty}#Intent;scheme=https;package=io.github.drew_developer.wordsearch;S.browser_fallback_url=${encodeURIComponent(playStoreUrl)};end`;
 
-        // Select best target based on platform
+        // Keep custom scheme for non-Android or legacy cases
+        const customScheme = `wordsearch-challenge://challenge/?seed=${seed}&difficulty=${difficulty}`;
+
         const isAndroid = /Android/i.test(navigator.userAgent);
-        const appLink = isAndroid ? intentUri : customScheme;
-
-        openAppBtn.href = appLink;
+        openAppBtn.href = isAndroid ? intentUri : customScheme;
 
         // Auto-redirect attempt (gentle)
         window.onload = function () {
             if (isAndroid && seed) {
-                // For Android, standard practice is to use the intent URI
-                // but only if we have a seed to actually play.
                 setTimeout(() => {
                     window.location.href = intentUri;
-                }, 500);
+                }, 800);
             }
         };
     </script>
