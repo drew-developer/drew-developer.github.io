@@ -218,31 +218,36 @@
     <script>
         // Parse Query Params
         const params = new URLSearchParams(window.location.search);
-        const seed = params.get('seed');
-        const difficulty = params.get('difficulty');
+        const seed = params.get('seed') || '';
+        const difficulty = params.get('difficulty') || 'MEDIUM';
 
         // Update UI
-        if (difficulty) {
+        if (params.get('difficulty')) {
             document.getElementById('difficulty-badge').innerText = difficulty + " DIFFICULTY";
         }
 
-        // Construct App Intent Scheme
-        // This tries to open the app directly via custom scheme if installed
-        const appScheme = `wordsearch-challenge://challenge?seed=${seed}&difficulty=${difficulty}`;
+        // Deep Link Logic
+        const openAppBtn = document.getElementById('open-app-btn');
         const playStoreUrl = "https://play.google.com/store/apps/details?id=io.github.drew_developer.wordsearch";
 
-        // Deep Link Logic
-        document.getElementById('open-app-btn').href = appScheme;
+        // Use Intent URI for Android (more robust than custom schemes alone)
+        const intentUri = `intent://challenge?seed=${seed}&difficulty=${difficulty}#Intent;scheme=wordsearch-challenge;package=io.github.drew_developer.wordsearch;S.browser_fallback_url=${encodeURIComponent(playStoreUrl)};end`;
+        const customScheme = `wordsearch-challenge://challenge?seed=${seed}&difficulty=${difficulty}`;
+
+        // Select best target based on platform
+        const isAndroid = /Android/i.test(navigator.userAgent);
+        const appLink = isAndroid ? intentUri : customScheme;
+
+        openAppBtn.href = appLink;
 
         // Auto-redirect attempt (gentle)
         window.onload = function () {
-            // Check if user is on mobile
-            if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-                // Attempt to open the app
-                window.location.href = appScheme;
-
-                // Fallback: If nothing happens after 2 seconds, redirect to Store is too aggressive, 
-                // so we just let them stay on this landing page instead.
+            if (isAndroid && seed) {
+                // For Android, standard practice is to use the intent URI
+                // but only if we have a seed to actually play.
+                setTimeout(() => {
+                    window.location.href = intentUri;
+                }, 500);
             }
         };
     </script>
