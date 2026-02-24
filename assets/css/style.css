@@ -257,6 +257,12 @@ nav {
     border: 1px solid rgba(75, 139, 190, 0.3);
 }
 
+.badge-flutter {
+    background-color: rgba(64, 209, 251, 0.15);
+    color: #40d1fb;
+    border: 1px solid rgba(64, 209, 251, 0.3);
+}
+
 .badge:hover {
     transform: translateY(-1px);
     filter: brightness(1.2);

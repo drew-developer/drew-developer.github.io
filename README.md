@@ -21,6 +21,7 @@ High-performance applications built with Kotlin, Rust, TypeScript, and modern fr
 - **💻 LogAnalyzer**: High Performance Desktop Log Analysis application. Built with **Electron, React, and TypeScript**. [GitHub](https://github.com/hwanjongyu/LogAnalyzer)
 - **⚡ LogAnalysis**: Ultra-fast, cross-platform log analysis tool designed for handling large log files. Built with **Rust, Tauri, and React**. [GitHub](https://github.com/hwanjongyu/LogAnalysis)
 - **🖥️ LogAnalysisGUI**: High-performance, cross-platform log analysis tool with real-time ADB monitoring and advanced regex filtering. Built with **Python and PyQt5**. [GitHub](https://github.com/hwanjongyu/loganalysis_gui)
+- **📚 LuminaBook**: Desktop-first EPUB library manager and reader with a visually rich "physical bookshelf" experience. Built with **Flutter, Riverpod, and Isar**. [GitHub](https://github.com/hwanjongyu/LuminaBook)
 - **🎞️ MediaHub**: High-performance, local-first media management tool. Built with **Rust, Tauri, and React**. [GitHub](https://github.com/hwanjongyu/MediaHub)
 - **📸 PrivacyLens**: Privacy-first mobile camera application that redacts sensitive information in real-time using on-device AI. Built with **Kotlin, Jetpack Compose, and MediaPipe**. [GitHub](https://github.com/hwanjongyu/PrivacyLens)
 
