@@ -1,13 +1,15 @@
 [
   {
     "relation": [
-      "delegate_permission/common.handle_all_urls"
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
     ],
     "target": {
       "namespace": "android_app",
       "package_name": "io.github.drew_developer.wordsearch",
       "sha256_cert_fingerprints": [
-        "A4:DE:B2:A6:EA:DA:A2:40:67:E6:7C:30:55:21:1D:25:47:B5:A6:23:17:81:28:09:56:EE:EF:8D:02:E4:5E:A4"
+        "A4:DE:B2:A6:EA:DA:A2:40:67:E6:7C:30:55:21:1D:25:47:B5:A6:23:17:81:28:09:56:EE:EF:8D:02:E4:5E:A4",
+        "46:0E:77:74:CE:51:B8:AB:58:87:61:E1:23:45:12:96:E9:9D:98:8A:3C:A8:02:E7:D1:A0:4E:2E:37:6C:95:70"
       ]
     }
   }
