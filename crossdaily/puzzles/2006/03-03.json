@@ -1,0 +1,459 @@
+{
+  "id": "2026-03-31",
+  "date": "2026-03-31",
+  "dayOfWeek": "Tuesday",
+  "theme": "SPACE",
+  "difficulty": "EASY",
+  "grid": [
+    [
+      "R",
+      "",
+      "S",
+      "H",
+      "A",
+      "K",
+      "E",
+      "",
+      "",
+      "R",
+      "E",
+      "C",
+      "I",
+      "P",
+      "E"
+    ],
+    [
+      "O",
+      "",
+      "U",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "E",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "P",
+      "E",
+      "R",
+      "S",
+      "P",
+      "E",
+      "C",
+      "T",
+      "I",
+      "V",
+      "E",
+      "",
+      "S",
+      "E",
+      "W"
+    ],
+    [
+      "E",
+      "",
+      "R",
+      "",
+      "",
+      "",
+      "",
+      "O",
+      "",
+      "I",
+      "",
+      "",
+      "H",
+      "",
+      ""
+    ],
+    [
+      "",
+      "T",
+      "O",
+      "U",
+      "C",
+      "H",
+      "",
+      "Y",
+      "",
+      "V",
+      "",
+      "",
+      "A",
+      "",
+      ""
+    ],
+    [
+      "",
+      "",
+      "U",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "R",
+      "E",
+      "S",
+      "O",
+      "L",
+      "V",
+      "E"
+    ],
+    [
+      "S",
+      "U",
+      "N",
+      "",
+      "R",
+      "A",
+      "I",
+      "S",
+      "E",
+      "",
+      "U",
+      "",
+      "L",
+      "",
+      "X"
+    ],
+    [
+      "",
+      "",
+      "D",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "V",
+      "",
+      "M",
+      "",
+      "O",
+      "",
+      "P"
+    ],
+    [
+      "",
+      "R",
+      "",
+      "T",
+      "H",
+      "R",
+      "O",
+      "N",
+      "E",
+      "",
+      "",
+      "",
+      "W",
+      "",
+      "E"
+    ],
+    [
+      "",
+      "I",
+      "",
+      "R",
+      "",
+      "",
+      "",
+      "",
+      "N",
+      "",
+      "",
+      "R",
+      "",
+      "",
+      "R"
+    ],
+    [
+      "",
+      "C",
+      "",
+      "A",
+      "",
+      "",
+      "S",
+      "I",
+      "G",
+      "H",
+      "",
+      "E",
+      "",
+      "",
+      "I"
+    ],
+    [
+      "S",
+      "H",
+      "A",
+      "M",
+      "E",
+      "",
+      "E",
+      "",
+      "E",
+      "",
+      "A",
+      "L",
+      "B",
+      "U",
+      "M"
+    ],
+    [
+      "A",
+      "",
+      "",
+      "P",
+      "",
+      "",
+      "X",
+      "",
+      "",
+      "",
+      "",
+      "A",
+      "",
+      "",
+      "E"
+    ],
+    [
+      "L",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "A",
+      "M",
+      "B",
+      "I",
+      "T",
+      "I",
+      "O",
+      "N"
+    ],
+    [
+      "E",
+      "C",
+      "L",
+      "I",
+      "P",
+      "S",
+      "E",
+      "",
+      "",
+      "",
+      "",
+      "E",
+      "",
+      "",
+      "T"
+    ]
+  ],
+  "clues": {
+    "across": [
+      {
+        "number": 2,
+        "clue": "The state of being move",
+        "answer": "SHAKE",
+        "row": 0,
+        "col": 2
+      },
+      {
+        "number": 3,
+        "clue": "The state of being plan",
+        "answer": "RECIPE",
+        "row": 0,
+        "col": 9
+      },
+      {
+        "number": 4,
+        "clue": "A particular attitude toward or way of regarding something; a point of view",
+        "answer": "PERSPECTIVE",
+        "row": 2,
+        "col": 0
+      },
+      {
+        "number": 6,
+        "clue": "A form of stitch",
+        "answer": "SEW",
+        "row": 2,
+        "col": 12
+      },
+      {
+        "number": 7,
+        "clue": "Pertaining to feel",
+        "answer": "TOUCH",
+        "row": 4,
+        "col": 1
+      },
+      {
+        "number": 8,
+        "clue": "A form of fix",
+        "answer": "RESOLVE",
+        "row": 5,
+        "col": 8
+      },
+      {
+        "number": 11,
+        "clue": "The star around which the earth orbits",
+        "answer": "SUN",
+        "row": 6,
+        "col": 0
+      },
+      {
+        "number": 12,
+        "clue": "Commonly associated with lift",
+        "answer": "RAISE",
+        "row": 6,
+        "col": 4
+      },
+      {
+        "number": 14,
+        "clue": "Commonly associated with chair",
+        "answer": "THRONE",
+        "row": 8,
+        "col": 3
+      },
+      {
+        "number": 16,
+        "clue": "Characterized by breath",
+        "answer": "SIGH",
+        "row": 10,
+        "col": 6
+      },
+      {
+        "number": 17,
+        "clue": "A form of guilt",
+        "answer": "SHAME",
+        "row": 11,
+        "col": 0
+      },
+      {
+        "number": 18,
+        "clue": "A collection of recordings issued as a single item",
+        "answer": "ALBUM",
+        "row": 11,
+        "col": 10
+      },
+      {
+        "number": 19,
+        "clue": "A strong desire to do or to achieve something",
+        "answer": "AMBITION",
+        "row": 13,
+        "col": 7
+      },
+      {
+        "number": 20,
+        "clue": "An obscuring of the light from one celestial body by another",
+        "answer": "ECLIPSE",
+        "row": 14,
+        "col": 0
+      }
+    ],
+    "down": [
+      {
+        "number": 1,
+        "clue": "Characterized by cord",
+        "answer": "ROPE",
+        "row": 0,
+        "col": 0
+      },
+      {
+        "number": 2,
+        "clue": "The state of being ring",
+        "answer": "SURROUND",
+        "row": 0,
+        "col": 2
+      },
+      {
+        "number": 3,
+        "clue": "Pertaining to wake",
+        "answer": "REVIVE",
+        "row": 0,
+        "col": 9
+      },
+      {
+        "number": 5,
+        "clue": "The state of being play",
+        "answer": "TOY",
+        "row": 2,
+        "col": 7
+      },
+      {
+        "number": 6,
+        "clue": "Characterized by low",
+        "answer": "SHALLOW",
+        "row": 2,
+        "col": 12
+      },
+      {
+        "number": 8,
+        "clue": "Used when discussing payback",
+        "answer": "REVENGE",
+        "row": 5,
+        "col": 8
+      },
+      {
+        "number": 9,
+        "clue": "Pertaining to total",
+        "answer": "SUM",
+        "row": 5,
+        "col": 10
+      },
+      {
+        "number": 10,
+        "clue": "A scientific procedure undertaken to make a discovery, test a hypothesis, or demonstrate a known fact",
+        "answer": "EXPERIMENT",
+        "row": 5,
+        "col": 14
+      },
+      {
+        "number": 13,
+        "clue": "The state of being wealthy",
+        "answer": "RICH",
+        "row": 8,
+        "col": 1
+      },
+      {
+        "number": 14,
+        "clue": "A form of walk",
+        "answer": "TRAMP",
+        "row": 8,
+        "col": 3
+      },
+      {
+        "number": 15,
+        "clue": "Commonly associated with tell",
+        "answer": "RELATE",
+        "row": 9,
+        "col": 11
+      },
+      {
+        "number": 16,
+        "clue": "Pertaining to gender",
+        "answer": "SEX",
+        "row": 10,
+        "col": 6
+      },
+      {
+        "number": 17,
+        "clue": "Pertaining to deal",
+        "answer": "SALE",
+        "row": 11,
+        "col": 0
+      }
+    ]
+  }
+}
