@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - 2048 Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ED943B;
+            --primary-glow: rgba(237, 148, 59, 0.3);
+            --bg-dark: #0F172A;
+            --bg-card: #1E293B;
+            --text-main: #F1F5F9;
+            --text-muted: #94A3B8;
+            --accent-cyan: #00F3FF;
+            --accent-pink: #FF00E0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 80px 20px;
+            text-align: center;
+            background: radial-gradient(circle at center, var(--primary-glow) 0%, transparent 70%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 15px var(--primary-glow));
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--bg-card);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(237, 148, 59, 0.2);
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary);
+            opacity: 0.5;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2 span {
+            margin-right: 15px;
+            font-size: 1rem;
+            background: rgba(237, 148, 59, 0.1);
+            padding: 4px 12px;
+            border-radius: 8px;
+            color: var(--primary);
+        }
+
+        p {
+            color: var(--text-main);
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        strong {
+            color: white;
+            font-weight: 600;
+        }
+
+        .commitment {
+            background: linear-gradient(135deg, var(--bg-card) 0%, #1e1b4b 100%);
+            border-color: rgba(0, 243, 255, 0.1);
+        }
+
+        .commitment::before {
+            background: var(--accent-cyan);
+        }
+
+        .commitment h2 {
+            color: var(--accent-cyan);
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .badge {
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .badge-privacy { background: rgba(0, 243, 255, 0.1); color: var(--accent-cyan); border: 1px solid rgba(0, 243, 255, 0.2); }
+        .badge-no-ads { background: rgba(255, 0, 224, 0.1); color: var(--accent-pink); border: 1px solid rgba(255, 0, 224, 0.2); }
+        .badge-offline { background: rgba(237, 148, 59, 0.1); color: var(--primary); border: 1px solid rgba(237, 148, 59, 0.2); }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        section {
+            animation: fadeIn 0.8s ease backwards;
+        }
+
+        section:nth-child(1) { animation-delay: 0.1s; }
+        section:nth-child(2) { animation-delay: 0.2s; }
+        section:nth-child(3) { animation-delay: 0.3s; }
+        section:nth-child(4) { animation-delay: 0.4s; }
+        section:nth-child(5) { animation-delay: 0.5s; }
+        section:nth-child(6) { animation-delay: 0.6s; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 3rem; }
+            section { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>2048</h1>
+        <p class="last-updated">Privacy Policy • Last Updated: March 8, 2026</p>
+        <div class="badges">
+            <span class="badge badge-privacy">100% Private</span>
+            <span class="badge badge-no-ads">No Ads</span>
+            <span class="badge badge-offline">Offline First</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="commitment">
+            <h2><span>01</span>Absolute Privacy Commitment</h2>
+            <p>The App is designed with a <strong>"Privacy First"</strong> philosophy. We do not collect, store, or transmit any personal data, usage statistics, or device-identifying information.</p>
+        </section>
+
+        <section>
+            <h2><span>02</span>Data Collection and Usage</h2>
+            <ul>
+                <li><strong>Personal Information:</strong> We do not collect names, email addresses, phone numbers, or any other personal identifiers.</li>
+                <li><strong>Usage Data:</strong> We do not track how you use the App, how long you play, or which features you use.</li>
+                <li><strong>Device Data:</strong> We do not collect technical information about your device, such as IP addresses or hardware IDs.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2><span>03</span>Local Data Storage</h2>
+            <p>All progress within the App, including your high scores, current game state, settings, and "Hall of Fame" records, is stored <strong>locally on your device</strong>.</p>
+            <ul>
+                <li>This data is managed through Android's Jetpack DataStore.</li>
+                <li>This data is <strong>never</strong> transmitted to any external server or third party.</li>
+                <li>You can delete all App-related data at any time by uninstalling the App or clearing storage in device settings.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2><span>04</span>Permissions</h2>
+            <p>The App requests only essential permissions:</p>
+            <ul>
+                <li><strong>Vibrate (android.permission.VIBRATE):</strong> Used exclusively to provide haptic feedback during gameplay. This can be toggled in settings.</li>
+            </ul>
+            <p>The App <strong>does not</strong> require or use Internet access (android.permission.INTERNET).</p>
+        </section>
+
+        <section>
+            <h2><span>05</span>Third-Party Services</h2>
+            <p>Transparency is key. The App does <strong>not</strong> include:</p>
+            <ul>
+                <li>Third-party advertising.</li>
+                <li>Third-party analytics (e.g., Google Analytics, Firebase Analytics).</li>
+                <li>Tracking-enabled social media buttons.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2><span>06</span>Children's Privacy</h2>
+            <p>Since we do not collect any data, the App is inherently safe for users of all ages, including children.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 2048 Game • Built with Privacy in Mind</p>
+    </footer>
+
+</body>
+</html>
