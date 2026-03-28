@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,7 +56,7 @@
             background: #ffffff;
             padding: 40px 60px;
             border-radius: 28px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
         }
 
         .last-updated {
@@ -88,7 +89,8 @@
             border-radius: 4px;
         }
 
-        p, ul {
+        p,
+        ul {
             font-size: 1.05rem;
             color: #333;
             margin-bottom: 20px;
@@ -129,12 +131,14 @@
                 margin: -20px 20px 60px;
                 padding: 30px;
             }
+
             .header h1 {
                 font-size: 2rem;
             }
         }
     </style>
 </head>
+
 <body>
 
     <header class="header">
@@ -144,47 +148,61 @@
 
     <main class="container">
         <span class="last-updated">LAST UPDATED: MARCH 2026</span>
-        
+
         <div class="highlight-box">
-            <p>FeedFlow is built with a <strong>Privacy Extremism</strong> philosophy. We believe your news consumption is your business, and our architecture reflects that commitment.</p>
+            <p>FeedFlow is built with a <strong>Privacy Extremism</strong> philosophy. We believe your news consumption
+                is your business, and our architecture reflects that commitment.</p>
         </div>
 
         <section>
             <div class="badge">Privacy Pillar 1</div>
             <h2>Zero-Data Collection</h2>
-            <p>FeedFlow <strong>does not collect, store, or transmit</strong> any personal identification information (PII). We do not use third-party analytics trackers like Firebase, Google Analytics, or Facebook SDK.</p>
+            <p>FeedFlow <strong>does not collect, store, or transmit</strong> any personal identification information
+                (PII). We do not use third-party analytics trackers like Firebase, Google Analytics, or Facebook SDK.
+            </p>
         </section>
 
         <section>
             <div class="badge">Privacy Pillar 2</div>
             <h2>On-Device Intelligence</h2>
-            <p>FeedFlow uses Google ML Kit for advanced features (Entity Extraction, Language Detection, and Translation).</p>
+            <p>FeedFlow uses Google ML Kit for advanced features (Entity Extraction, Language Detection, and
+                Translation).</p>
             <ul>
-                <li><strong>Privacy Assurance:</strong> All intelligence processing occurs <strong>locally on your device</strong>.</li>
-                <li><strong>Data Isolation:</strong> Your article content and reading habits are never uploaded to Google's clouds or our servers for analysis.</li>
-                <li><strong>Model Downloads:</strong> ML Kit may connect to Google servers solely to download or update the language models required for these features to function offline.</li>
+                <li><strong>Privacy Assurance:</strong> All intelligence processing occurs <strong>locally on your
+                        device</strong>.</li>
+                <li><strong>Data Isolation:</strong> Your article content and reading habits are never uploaded to
+                    Google's clouds or our servers for analysis.</li>
+                <li><strong>Model Downloads:</strong> ML Kit may connect to Google servers solely to download or update
+                    the language models required for these features to function offline.</li>
             </ul>
         </section>
 
         <section>
             <div class="badge">Privacy Pillar 3</div>
             <h2>Local Storage</h2>
-            <p>All your feed subscriptions, bookmarks, and read/unread statuses are stored in a local <strong>SQLite (Room)</strong> database on your device. This data never leaves your device unless you explicitly perform an <strong>OPML Export</strong> to a destination of your choice.</p>
+            <p>All your feed subscriptions, bookmarks, and read/unread statuses are stored in a local <strong>SQLite
+                    (Room)</strong> database on your device. This data never leaves your device unless you explicitly
+                perform an <strong>OPML Export</strong> to a destination of your choice.</p>
         </section>
 
         <section>
             <h2>Network Connections</h2>
             <p>FeedFlow establishes the following external connections:</p>
             <ul>
-                <li><strong>Feed Refreshing:</strong> The app connects directly to the RSS/Atom feed URLs you provide. No middle-man proxy is used.</li>
-                <li><strong>Article Previews:</strong> Favicons and article images are fetched directly from the source domains using <strong>Coil</strong>.</li>
-                <li><strong>External Links:</strong> Clicking on an article will open it in the built-in reader (Clean View) or your system browser. We have no control over the privacy policies of the websites you visit.</li>
+                <li><strong>Feed Refreshing:</strong> The app connects directly to the RSS/Atom feed URLs you provide.
+                    No middle-man proxy is used.</li>
+                <li><strong>Article Previews:</strong> Favicons and article images are fetched directly from the source
+                    domains using <strong>Coil</strong>.</li>
+                <li><strong>External Links:</strong> Clicking on an article will open it in the built-in reader (Clean
+                    View) or your system browser. We have no control over the privacy policies of the websites you
+                    visit.</li>
             </ul>
         </section>
 
         <section>
             <h2>Third-Party Services</h2>
-            <p>FeedFlow is open-source and does not integrate with any social media platforms or advertising networks.</p>
+            <p>FeedFlow is open-source and does not integrate with any social media platforms or advertising networks.
+            </p>
         </section>
 
         <section>
@@ -192,11 +210,27 @@
             <p><strong>INTERNET:</strong> Required to download your news feeds and article images.</p>
         </section>
 
-        <section>
-            <h2>Contact</h2>
-            <p>As FeedFlow is a local-only application with no backend, we have no "user accounts" to manage or delete. For technical inquiries, please visit our GitHub repository.</p>
+        <section id="contact">
+            <h2>7. Contact & Transparency</h2>
+            <div class="highlight-box">
+                <p><strong>Publisher Entity:</strong> Drew Developer (Independent Individual)</p>
+                <p><strong>App Type:</strong> News Aggregator / Indexer</p>
+                <p><strong>Identity Status:</strong> FeedFlow is an independent technological tool for RSS aggregation
+                    and does not author or distribute proprietary journalistic content.</p>
+                <p><strong>Contact Channels:</strong></p>
+                <ul style="margin-top: 15px;">
+                    <li><strong>Support Email:</strong> <a href="mailto:support@drew-developer.github.io"
+                            style="color: var(--primary);">drew.developer@gmail.com</a></li>
+                </ul>
+            </div>
         </section>
+
+        <footer
+            style="text-align: center; color: var(--on-surface-variant); padding: 40px 0; font-size: 0.9rem; font-weight: 600;">
+            &copy; 2026 FeedFlow by Drew Developer. Built with Privacy Extremism.
+        </footer>
     </main>
 
 </body>
+
 </html>
