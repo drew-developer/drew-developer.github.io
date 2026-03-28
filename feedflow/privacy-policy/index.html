@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedFlow Privacy Policy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #008577;
+            --on-primary: #ffffff;
+            --surface: #fdfdfd;
+            --on-surface: #1a1a1a;
+            --surface-variant: #f2f2f2;
+            --on-surface-variant: #444444;
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--surface);
+            color: var(--on-surface);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary), #006b5f);
+            color: var(--on-primary);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            box-shadow: 0 10px 30px rgba(0, 133, 119, 0.2);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-weight: 800;
+            font-size: 3rem;
+            letter-spacing: -1px;
+        }
+
+        .header p {
+            margin: 10px 0 0;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: -40px auto 100px;
+            background: #ffffff;
+            padding: 40px 60px;
+            border-radius: 28px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .last-updated {
+            color: var(--on-surface-variant);
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+            display: block;
+            text-align: right;
+            font-weight: 600;
+        }
+
+        h2 {
+            display: flex;
+            align-items: center;
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin-top: 50px;
+            border-bottom: 2px solid var(--surface-variant);
+            padding-bottom: 10px;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 24px;
+            background: var(--primary);
+            margin-right: 15px;
+            border-radius: 4px;
+        }
+
+        p, ul {
+            font-size: 1.05rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        .highlight-box {
+            background-color: var(--surface-variant);
+            padding: 25px;
+            border-radius: 20px;
+            border-left: 6px solid var(--primary);
+            margin: 30px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-weight: 600;
+            color: var(--on-surface-variant);
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(0, 133, 119, 0.1);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: -20px 20px 60px;
+                padding: 30px;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>FeedFlow</h1>
+        <p>Privacy Policy</p>
+    </header>
+
+    <main class="container">
+        <span class="last-updated">LAST UPDATED: MARCH 2026</span>
+        
+        <div class="highlight-box">
+            <p>FeedFlow is built with a <strong>Privacy Extremism</strong> philosophy. We believe your news consumption is your business, and our architecture reflects that commitment.</p>
+        </div>
+
+        <section>
+            <div class="badge">Privacy Pillar 1</div>
+            <h2>Zero-Data Collection</h2>
+            <p>FeedFlow <strong>does not collect, store, or transmit</strong> any personal identification information (PII). We do not use third-party analytics trackers like Firebase, Google Analytics, or Facebook SDK.</p>
+        </section>
+
+        <section>
+            <div class="badge">Privacy Pillar 2</div>
+            <h2>On-Device Intelligence</h2>
+            <p>FeedFlow uses Google ML Kit for advanced features (Entity Extraction, Language Detection, and Translation).</p>
+            <ul>
+                <li><strong>Privacy Assurance:</strong> All intelligence processing occurs <strong>locally on your device</strong>.</li>
+                <li><strong>Data Isolation:</strong> Your article content and reading habits are never uploaded to Google's clouds or our servers for analysis.</li>
+                <li><strong>Model Downloads:</strong> ML Kit may connect to Google servers solely to download or update the language models required for these features to function offline.</li>
+            </ul>
+        </section>
+
+        <section>
+            <div class="badge">Privacy Pillar 3</div>
+            <h2>Local Storage</h2>
+            <p>All your feed subscriptions, bookmarks, and read/unread statuses are stored in a local <strong>SQLite (Room)</strong> database on your device. This data never leaves your device unless you explicitly perform an <strong>OPML Export</strong> to a destination of your choice.</p>
+        </section>
+
+        <section>
+            <h2>Network Connections</h2>
+            <p>FeedFlow establishes the following external connections:</p>
+            <ul>
+                <li><strong>Feed Refreshing:</strong> The app connects directly to the RSS/Atom feed URLs you provide. No middle-man proxy is used.</li>
+                <li><strong>Article Previews:</strong> Favicons and article images are fetched directly from the source domains using <strong>Coil</strong>.</li>
+                <li><strong>External Links:</strong> Clicking on an article will open it in the built-in reader (Clean View) or your system browser. We have no control over the privacy policies of the websites you visit.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Third-Party Services</h2>
+            <p>FeedFlow is open-source and does not integrate with any social media platforms or advertising networks.</p>
+        </section>
+
+        <section>
+            <h2>Permissions</h2>
+            <p><strong>INTERNET:</strong> Required to download your news feeds and article images.</p>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>As FeedFlow is a local-only application with no backend, we have no "user accounts" to manage or delete. For technical inquiries, please visit our GitHub repository.</p>
+        </section>
+    </main>
+
+</body>
+</html>

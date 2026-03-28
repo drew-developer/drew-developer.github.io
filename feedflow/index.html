@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global RSS Discovery | FeedFlow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #008577;
+            --secondary: #006064;
+            --surface: #fdfdfd;
+            --on-surface: #1a1a1a;
+            --on-surface-variant: #5f6368;
+            --card: #ffffff;
+            --font-main: 'Inter', 'Noto Sans KR', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--surface);
+            color: var(--on-surface);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: -2px;
+            font-weight: 800;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: -40px auto 100px;
+            padding: 0 20px;
+        }
+
+        .language-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .lang-btn {
+            background: white;
+            border: 2px solid #eee;
+            padding: 12px 30px;
+            border-radius: 20px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            box-shadow: 0 8px 15px rgba(0, 133, 119, 0.2);
+        }
+
+        .category-nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .category-chip {
+            background: var(--card);
+            border: 1px solid #ddd;
+            color: var(--on-surface-variant);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+
+        .category-chip.active {
+            background: #eee;
+            color: var(--on-surface);
+            border-color: #999;
+        }
+
+        .feed-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .feed-card {
+            background: var(--card);
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .feed-card:hover { transform: translateY(-5px); }
+
+        .badge-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .badge {
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 8px;
+            text-transform: uppercase;
+        }
+
+        .badge.lang { background: #E1F5FE; color: #0288D1; }
+        .badge.cat { background: #E8F5E9; color: #2E7D32; }
+
+        .feed-card h3 { margin: 0; font-size: 1.3rem; font-weight: 800; }
+        .feed-card .url {
+            font-size: 0.8rem;
+            color: var(--on-surface-variant);
+            margin: 12px 0 20px;
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 12px;
+            font-family: monospace;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .copy-btn {
+            margin-top: auto;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 12px;
+            font-weight: 800;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .copy-btn.copied { background: #4caf50; }
+
+        #toast {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%) translateY(200px);
+            background: #1a1a1a;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 100px;
+            font-weight: 600;
+            transition: 0.4s;
+            z-index: 100;
+        }
+
+        #toast.show { transform: translateX(-50%) translateY(0); }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 2.2rem; }
+            .feed-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Global Discovery</h1>
+        <p>Expertly curated RSS feeds for your FeedFlow timeline.</p>
+    </header>
+
+    <main class="container">
+        <div class="language-toggle">
+            <button class="lang-btn active" onclick="setLanguage('en')">English</button>
+            <button class="lang-btn" onclick="setLanguage('ko')">한국어 (Korean)</button>
+        </div>
+
+        <nav class="category-nav" id="catNav">
+            <!-- Categories based on language -->
+        </nav>
+
+        <div class="feed-grid" id="feedGrid">
+            <!-- Cards -->
+        </div>
+    </main>
+
+    <div id="toast">Link copied!</div>
+
+    <script>
+        const feeds = [
+            // ENGLISH FEEDS
+            { title: "The Verge", url: "https://www.theverge.com/rss/index.xml", category: "News", lang: "en" },
+            { title: "Reuters World", url: "https://www.reutersagency.com/feed/", category: "News", lang: "en" },
+            { title: "Ars Technica", url: "https://feeds.arstechnica.com/arstechnica/index", category: "Tech", lang: "en" },
+            { title: "OpenAI Blog", url: "https://openai.com/blog/rss.xml", category: "AI/ML", lang: "en" },
+            { title: "Google DeepMind", url: "https://deepmind.google/discover/blog/feed/", category: "AI/ML", lang: "en" },
+            { title: "MIT Tech Review", url: "https://www.technologyreview.com/feed/", category: "Tech", lang: "en" },
+            { title: "Nature", url: "https://www.nature.com/nature.rss", category: "Science", lang: "en" },
+            { title: "NASA News", url: "https://www.nasa.gov/news-release/feed/", category: "Science", lang: "en" },
+            { title: "GitHub Blog", url: "https://github.blog/feed/", category: "Dev", lang: "en" },
+            { title: "Hacker News", url: "https://news.ycombinator.com/rss", category: "Dev", lang: "en" },
+            { title: "ESPN Top News", url: "https://www.espn.com/espn/rss/news", category: "Sports", lang: "en" },
+            { title: "Bloomberg", url: "https://feeds.bloomberg.com/news/business/rss.xml", category: "Business", lang: "en" },
+
+            // KOREAN FEEDS
+            { title: "연합뉴스 주요뉴스", url: "https://www.yna.co.kr/rss/yna.xml", category: "News", lang: "ko" },
+            { title: "중앙일보 이슈", url: "http://rss.joins.com/joins_news_list.xml", category: "News", lang: "ko" },
+            { title: "매일경제 경제전체", url: "https://news.mk.co.kr/rss/30100001.xml", category: "Business", lang: "ko" },
+            { title: "ZDNet Korea", url: "https://zdnet.co.kr/rss/all.xml", category: "Tech", lang: "ko" },
+            { title: "Naver D2 Tech", url: "https://d2.naver.com/d2.atom", category: "Dev", lang: "ko" },
+            { title: "LINE Engineering", url: "https://techblog.lycorp.co.jp/ko/feed/index.xml", category: "Dev", lang: "ko" },
+            { title: "Woowahan Tech", url: "https://techblog.woowahan.com/feed/", category: "Dev", lang: "ko" },
+            { title: "GeekNews (hada.io)", url: "https://news.hada.io/rss", category: "Tech", lang: "ko" },
+            { title: "브런치스토리 IT", url: "https://brunch.co.kr/rss/hub/it", category: "Culture", lang: "ko" },
+            { title: "데일리안 뉴스", url: "https://www.dailian.co.kr/rss/all.xml", category: "News", lang: "ko" },
+            { title: "동아사이언스", url: "https://www.dongascience.com/rss/all", category: "Science", lang: "ko" }
+        ];
+
+        let currentLang = 'en';
+        let currentCat = 'All';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            currentCat = 'All';
+            const btns = document.querySelectorAll('.lang-btn');
+            btns[0].classList.toggle('active', lang === 'en');
+            btns[1].classList.toggle('active', lang === 'ko');
+            
+            updateCategories();
+            render();
+        }
+
+        function updateCategories() {
+            const nav = document.getElementById('catNav');
+            const cats = ['All', ...new Set(feeds.filter(f => f.lang === currentLang).map(f => f.category))];
+            nav.innerHTML = cats.map(c => `<div class="category-chip ${c === currentCat ? 'active' : ''}" onclick="setCat('${c}')">${c}</div>`).join('');
+        }
+
+        function setCat(cat) {
+            currentCat = cat;
+            updateCategories();
+            render();
+        }
+
+        function render() {
+            const grid = document.getElementById('feedGrid');
+            const data = feeds.filter(f => f.lang === currentLang && (currentCat === 'All' || f.category === currentCat));
+            
+            grid.innerHTML = data.map(f => `
+                <div class="feed-card">
+                    <div class="badge-row">
+                        <span class="badge lang">${f.lang.toUpperCase()}</span>
+                        <span class="badge cat">${f.category}</span>
+                    </div>
+                    <h3>${f.title}</h3>
+                    <div class="url">${f.url}</div>
+                    <button class="copy-btn" onclick="copy('${f.url}', this)">
+                        Copy Feed URL
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function copy(text, btn) {
+            navigator.clipboard.writeText(text).then(() => {
+                btn.innerText = 'Copied!';
+                btn.classList.add('copied');
+                
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                
+                setTimeout(() => {
+                    btn.innerText = 'Copy Feed URL';
+                    btn.classList.remove('copied');
+                    toast.classList.remove('show');
+                }, 2000);
+            });
+        }
+
+        setLanguage('en');
+    </script>
+</body>
+</html>
