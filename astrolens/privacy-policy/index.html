@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - AstroLens</title>
+    <meta name="description" content="Privacy Policy for AstroLens - A privacy-first astronomy application.">
+    
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --space-black: #05070a;
+            --space-deep: #0f172a;
+            --nebula-blue: #3b82f6;
+            --nebula-purple: #8b5cf6;
+            --star-white: #f8fafc;
+            --glass: rgba(15, 23, 42, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--space-black);
+            background: radial-gradient(circle at top right, #1e293b, #05070a);
+            color: var(--star-white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+            padding: 40px 20px;
+        }
+
+        /* Ambient Stars Background */
+        .stars-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: twinkle var(--duration) infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.2); }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #3b82f6, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.75rem;
+            color: var(--nebula-blue);
+            margin: 30px 0 15px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 2px;
+            background: var(--nebula-blue);
+            margin-right: 12px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #cbd5e1;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 12px;
+            color: #cbd5e1;
+        }
+
+        li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--nebula-purple);
+            font-size: 0.8rem;
+        }
+
+        .bold {
+            color: var(--star-white);
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            color: #64748b;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.9rem;
+        }
+
+        .last-updated {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 100px;
+            color: var(--nebula-blue);
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 640px) {
+            h1 { font-size: 2.5rem; }
+            .card { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars-container" id="stars"></div>
+
+    <div class="container">
+        <header>
+            <div class="last-updated">Last Updated: April 15, 2026</div>
+            <h1>AstroLens</h1>
+            <div class="subtitle">Privacy Policy</div>
+        </header>
+
+        <section class="card">
+            <p>AstroLens is committed to protecting your privacy. This Privacy Policy describes how we handle information in our application.</p>
+
+            <h2>1. Local-Only Processing</h2>
+            <p>AstroLens is designed with a <span class="bold">Privacy-First</span> philosophy. All data processing—including celestial calculations, image stacking, and AI-based star identification—happens entirely on your device.</p>
+            <p>We do not operate any backend servers, and your data never leaves your phone unless you explicitly choose to share it via the Android system share menu.</p>
+
+            <h2>2. Information We Use</h2>
+            
+            <div class="bold">A. Location Data</div>
+            <ul>
+                <li><span class="bold">Purpose:</span> To calculate accurate azimuth and elevation coordinates for celestial objects based on your current position on Earth.</li>
+                <li><span class="bold">Storage:</span> Your location data is used only during the active session. It is never stored permanently or transmitted to any third party.</li>
+            </ul>
+
+            <div class="bold">B. Camera Data</div>
+            <ul>
+                <li><span class="bold">Purpose:</span> To provide the Augmented Reality (AR) sky overlay and to capture photos of the night sky.</li>
+                <li><span class="bold">Processing:</span> Video frames from your camera are processed in real-time for star detection and identification using local AI models. No camera data is uploaded to the cloud.</li>
+            </ul>
+
+            <div class="bold">C. Storage Access</div>
+            <ul>
+                <li><span class="bold">Purpose:</span> To save your captured astrophotography images directly to your device's gallery (MediaStore).</li>
+            </ul>
+
+            <h2>3. Third-Party Services</h2>
+            <p>AstroLens does <span class="bold">not</span> include any third-party analytics, tracking SDKs, or advertising platforms. There are no "telemetry" or "usage reporting" features.</p>
+
+            <h2>4. Artificial Intelligence</h2>
+            <p>All AI-based features, such as star identification and constellation mapping, are powered by local <span class="bold">LiteRT</span> (TensorFlow Lite) models. No image data is sent to external AI providers or servers.</p>
+
+            <h2>5. Security</h2>
+            <p>Because all your data remains on your device, the security of your information is tied to the security of your Android device. We recommend using standard device security measures to protect your photos.</p>
+
+            <div class="footer">
+                <p>AstroLens - See the Stars, Keep your Privacy.</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Generate random stars
+        const starsContainer = document.getElementById('stars');
+        const starCount = 150;
+
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            
+            const size = Math.random() * 2 + 1;
+            const x = Math.random() * 100;
+            const y = Math.random() * 100;
+            const duration = Math.random() * 3 + 2;
+            const delay = Math.random() * 5;
+
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.left = `${x}%`;
+            star.style.top = `${y}%`;
+            star.style.setProperty('--duration', `${duration}s`);
+            star.style.animationDelay = `${delay}s`;
+
+            starsContainer.appendChild(star);
+        }
+    </script>
+</body>
+</html>
