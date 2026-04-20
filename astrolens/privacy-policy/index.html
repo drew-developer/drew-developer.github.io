@@ -183,45 +183,45 @@
 
     <div class="container">
         <header>
-            <div class="last-updated">Last Updated: April 15, 2026</div>
+            <div class="last-updated">Last Updated: April 20, 2026</div>
             <h1>AstroLens</h1>
             <div class="subtitle">Privacy Policy</div>
-        </header>
+        </header>        <section class="card">
+            <p>AstroLens is committed to protecting your privacy. This Privacy Policy describes how we handle information in our application to provide you with the best stargazing experience.</p>
 
-        <section class="card">
-            <p>AstroLens is committed to protecting your privacy. This Privacy Policy describes how we handle information in our application.</p>
-
-            <h2>1. Local-Only Processing</h2>
-            <p>AstroLens is designed with a <span class="bold">Privacy-First</span> philosophy. All data processing—including celestial calculations, image stacking, and AI-based star identification—happens entirely on your device.</p>
-            <p>We do not operate any backend servers, and your data never leaves your phone unless you explicitly choose to share it via the Android system share menu.</p>
+            <h2>1. Data Processing Architecture</h2>
+            <p>AstroLens is designed with a <span class="bold">Privacy-First</span> philosophy. Most data processing—including celestial calculations, image stacking, and AI-based star identification—happens entirely on your device.</p>
+            <p>However, to provide real-time sky conditions, certain information is transmitted to third-party providers as described below. We do not sell or monetize your data.</p>
 
             <h2>2. Information We Use</h2>
             
-            <div class="bold">A. Location Data</div>
+            <div class="bold">A. Location Data (Approximate and Precise)</div>
             <ul>
-                <li><span class="bold">Purpose:</span> To calculate accurate azimuth and elevation coordinates for celestial objects based on your current position on Earth.</li>
-                <li><span class="bold">Storage:</span> Your location data is used only during the active session. It is never stored permanently or transmitted to any third party.</li>
+                <li><span class="bold">Purpose:</span> To calculate accurate celestial coordinates and to provide local weather/sky condition updates.</li>
+                <li><span class="bold">Processing:</span> Your coordinates are processed locally for star mapping. To fetch weather data, your latitude and longitude are transmitted to <span class="bold">Open-Meteo</span> (our third-party weather provider).</li>
+                <li><span class="bold">Sharing:</span> We share only the necessary coordinates with Open-Meteo. No other personal identifiers are attached to this request.</li>
             </ul>
 
             <div class="bold">B. Camera Data</div>
             <ul>
                 <li><span class="bold">Purpose:</span> To provide the Augmented Reality (AR) sky overlay and to capture photos of the night sky.</li>
-                <li><span class="bold">Processing:</span> Video frames from your camera are processed in real-time for star detection and identification using local AI models. No camera data is uploaded to the cloud.</li>
+                <li><span class="bold">Processing:</span> Video frames are processed in real-time on-device for star detection. <span class="bold">No camera data or images are ever uploaded to our servers or third-party AI providers.</span></li>
             </ul>
 
             <div class="bold">C. Storage Access</div>
             <ul>
-                <li><span class="bold">Purpose:</span> To save your captured astrophotography images directly to your device's gallery (MediaStore).</li>
+                <li><span class="bold">Purpose:</span> To save your captured astrophotography images directly to your device's gallery.</li>
             </ul>
 
             <h2>3. Third-Party Services</h2>
-            <p>AstroLens does <span class="bold">not</span> include any third-party analytics, tracking SDKs, or advertising platforms. There are no "telemetry" or "usage reporting" features.</p>
+            <p>AstroLens utilizes <span class="bold">Open-Meteo</span> for atmospheric data. When the app fetches weather, your IP address and location coordinates may be visible to their servers. We do not include any hidden tracking SDKs, advertising platforms, or analytics (such as Google Analytics or Firebase).</p>
 
-            <h2>4. Artificial Intelligence</h2>
-            <p>All AI-based features, such as star identification and constellation mapping, are powered by local <span class="bold">LiteRT</span> (TensorFlow Lite) models. No image data is sent to external AI providers or servers.</p>
+            <h2>4. Data Retention and Deletion</h2>
+            <p>We do not store your personal data or location history on any external database. Because all such data is ephemeral or stored locally on your device, you can delete all app-related data by clearing the app cache or uninstalling AstroLens.</p>
 
-            <h2>5. Security</h2>
-            <p>Because all your data remains on your device, the security of your information is tied to the security of your Android device. We recommend using standard device security measures to protect your photos.</p>
+            <h2>5. Contact Information</h2>
+            <p>If you have any questions regarding this Privacy Policy, please contact us at:</p>
+            <p class="bold">support@astrolens.io</p>
 
             <div class="footer">
                 <p>AstroLens - See the Stars, Keep your Privacy.</p>
