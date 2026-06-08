@@ -3,6 +3,15 @@
 ## 🚀 Crafting Modern Software Experiences
 High-performance applications built with Kotlin, Rust, TypeScript, and modern frameworks.
 
+## 🌐 Open Source
+- **🛠️ Stitch-to-Compose Conversion Loop**: A specialized AI skill that enables coding agents to programmatically convert Google Stitch mockups into Jetpack Compose code with a self-healing feedback loop. Built with **Python**. [GitHub](https://github.com/hwanjongyu/skills)
+- **💻 LogAnalyzer**: High Performance Desktop Log Analysis application. Built with **Electron, React, and TypeScript**. [GitHub](https://github.com/hwanjongyu/LogAnalyzer)
+- **⚡ LogAnalysis**: Ultra-fast, cross-platform log analysis tool designed for handling large log files. Built with **Rust, Tauri, and React**. [GitHub](https://github.com/hwanjongyu/LogAnalysis)
+- **🖥️ LogAnalysisGUI**: High-performance, cross-platform log analysis tool with real-time ADB monitoring and advanced regex filtering. Built with **Python and PyQt5**. [GitHub](https://github.com/hwanjongyu/loganalysis_gui)
+- **📚 LuminaBook**: Desktop-first EPUB library manager and reader with a visually rich "physical bookshelf" experience. Built with **Flutter, Riverpod, and Isar**. [GitHub](https://github.com/hwanjongyu/LuminaBook)
+- **🎞️ MediaHub**: High-performance, local-first media management tool. Built with **Rust, Tauri, and React**. [GitHub](https://github.com/hwanjongyu/MediaHub)
+- **📸 PrivacyLens**: Privacy-first mobile camera application that redacts sensitive information in real-time using on-device AI. Built with **Kotlin, Jetpack Compose, and MediaPipe**. [GitHub](https://github.com/hwanjongyu/PrivacyLens)
+
 ## 📱 My Apps
 
 ### Android Apps
@@ -18,15 +27,6 @@ High-performance applications built with Kotlin, Rust, TypeScript, and modern fr
 - **📅 Cross Daily**: A fresh crossword puzzle every single day. Improve your vocabulary and mental agility with our minimalist daily challenge. [Play Store](https://play.google.com/store/apps/details?id=io.github.drew_developer.crossdaily) | [Privacy Policy](./crossdaily/privacy-policy/)
 - **📷 Snap Day**: Capture your daily moments. A simple and elegant photo journal to remember every day. [Play Store](https://play.google.com/store/apps/details?id=io.github.drew_developer.snapday) | [Privacy Policy](./snapday/privacy-policy/)
 - **🧊 Block Blast**: An addictive block puzzle game that challenges your spatial skills. Match blocks to clear lines and achieve high scores. [Play Store](https://play.google.com/store/apps/details?id=io.github.drew_developer.blockblast) | [Privacy Policy](./blockblast/privacy-policy/)
-
-
-### 🌐 Open Source
-- **💻 LogAnalyzer**: High Performance Desktop Log Analysis application. Built with **Electron, React, and TypeScript**. [GitHub](https://github.com/hwanjongyu/LogAnalyzer)
-- **⚡ LogAnalysis**: Ultra-fast, cross-platform log analysis tool designed for handling large log files. Built with **Rust, Tauri, and React**. [GitHub](https://github.com/hwanjongyu/LogAnalysis)
-- **🖥️ LogAnalysisGUI**: High-performance, cross-platform log analysis tool with real-time ADB monitoring and advanced regex filtering. Built with **Python and PyQt5**. [GitHub](https://github.com/hwanjongyu/loganalysis_gui)
-- **📚 LuminaBook**: Desktop-first EPUB library manager and reader with a visually rich "physical bookshelf" experience. Built with **Flutter, Riverpod, and Isar**. [GitHub](https://github.com/hwanjongyu/LuminaBook)
-- **🎞️ MediaHub**: High-performance, local-first media management tool. Built with **Rust, Tauri, and React**. [GitHub](https://github.com/hwanjongyu/MediaHub)
-- **📸 PrivacyLens**: Privacy-first mobile camera application that redacts sensitive information in real-time using on-device AI. Built with **Kotlin, Jetpack Compose, and MediaPipe**. [GitHub](https://github.com/hwanjongyu/PrivacyLens)
 
 ## 📫 Contact & Links
 - [🎮 Google Play Store](https://play.google.com/store/apps/developer?id=Drew+Developer)
