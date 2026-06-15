@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Orosy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F9F6F0;
+            --card-bg: rgba(244, 239, 235, 0.7);
+            --primary-ink: #2E2A25;
+            --muted-sage: #808F87;
+            --deep-slate: #3A4740;
+            --accent-green: #8FA89B;
+            --accent-terracotta: #C8826D;
+            --border-color: rgba(46, 42, 37, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-ink);
+            line-height: 1.6;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(46, 42, 37, 0.04);
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--deep-slate);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--muted-sage);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            color: var(--primary-ink);
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+
+        section {
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--deep-slate);
+            margin-bottom: 16px;
+            border-left: 4px solid var(--accent-green);
+            padding-left: 12px;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-ink);
+            margin: 16px 0 8px 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            opacity: 0.85;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            opacity: 0.85;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 1.4rem;
+            position: absolute;
+            left: 4px;
+            top: -3px;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--deep-slate);
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-color);
+            margin: 32px 0;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted-sage);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 16px 12px;
+            }
+            .container {
+                padding: 24px 16px;
+                border-radius: 16px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Privacy Policy</h1>
+            <div class="last-updated">Last Updated: June 15, 2026</div>
+        </header>
+
+        <p class="intro">
+            Orosy (the "App") is committed to protecting your privacy. This Privacy Policy explains how we handle your information and safeguard your personal data when you use Orosy.
+        </p>
+
+        <hr>
+
+        <section>
+            <h2>1. Information Collection and Use</h2>
+            
+            <h3>Local-First Data Storage</h3>
+            <p>Orosy operates primarily as a <strong>local-first</strong> application. This means that:</p>
+            <ul>
+                <li><strong>Habits and Completion Data:</strong> Your habit lists, tiers (Anchor, Core, Bonus), scheduling preferences, and completions are stored locally in an SQLite Room database on your device.</li>
+                <li><strong>Daily Journals and Mood Logs:</strong> Any sensitive personal reflections, journals, and energy level logs you input are stored locally in the App's SharedPreferences or local database.</li>
+                <li><strong>No Server Uploads:</strong> We do not automatically collect, store, or transmit your habit data or personal journal logs to any external servers. Your data stays entirely in your control on your physical device.</li>
+            </ul>
+
+            <h3>Device Information</h3>
+            <p>We do not collect any personal device identifiers, IP addresses, or location data.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>2. Optional Features and Integrations</h2>
+
+            <h3>Home Screen Widget (Glance)</h3>
+            <p>
+                The App offers an optional home-screen widget powered by Jetpack Glance. This widget queries your local Room database to display your daily checklist on your home screen. No data is sent over the network.
+            </p>
+
+            <h3>Cloud Backup and Synchronization (Optional)</h3>
+            <p>If you choose to use the App's backup and synchronization features in the future:</p>
+            <ul>
+                <li>The App may upload encrypted copies of your local database to your personal cloud storage (e.g., Google Drive) depending on your selection.</li>
+                <li>We do not host your database on private third-party servers.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>3. Data Security</h2>
+            <p>We care about protecting your personal well-being logs:</p>
+            <ul>
+                <li>All data is contained within the secure sandbox environment provided by the Android Operating System, preventing other apps from accessing your database unless the device is rooted or compromised.</li>
+                <li>We advise you to secure your device with lock screen options (PIN, pattern, or biometrics) to prevent unauthorized local access to your journals.</li>
+                <li>In the App configuration, we set <code>android:allowBackup="false"</code> to prevent local database extractions via standard ADB backups.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>4. Children's Privacy</h2>
+            <p>
+                Our App is safe for general use and does not knowingly collect any personal data from anyone, including children under the age of 13. Since all data remains on your local device, we have no means of accessing or storing children's information.
+            </p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>5. Changes to This Privacy Policy</h2>
+            <p>
+                We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy in the App's documentation or updating the "Last Updated" date at the top of this policy. You are advised to review this Privacy Policy periodically for any changes.
+            </p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>6. Contact Us</h2>
+            <p>
+                If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us through the developer channels provided in the App settings.
+            </p>
+        </section>
+
+        <footer>
+            &copy; 2026 Orosy. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>

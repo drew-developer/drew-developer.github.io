@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Orosy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F9F6F0;
+            --card-bg: rgba(244, 239, 235, 0.7);
+            --primary-ink: #2E2A25;
+            --muted-sage: #808F87;
+            --deep-slate: #3A4740;
+            --accent-green: #8FA89B;
+            --accent-terracotta: #C8826D;
+            --border-color: rgba(46, 42, 37, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-ink);
+            line-height: 1.6;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(46, 42, 37, 0.04);
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--deep-slate);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--muted-sage);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            color: var(--primary-ink);
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+
+        section {
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--deep-slate);
+            margin-bottom: 16px;
+            border-left: 4px solid var(--accent-green);
+            padding-left: 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            opacity: 0.85;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            opacity: 0.85;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 1.4rem;
+            position: absolute;
+            left: 4px;
+            top: -3px;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--deep-slate);
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-color);
+            margin: 32px 0;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted-sage);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 16px 12px;
+            }
+            .container {
+                padding: 24px 16px;
+                border-radius: 16px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Terms of Service</h1>
+            <div class="last-updated">Last Updated: June 15, 2026</div>
+        </header>
+
+        <p class="intro">
+            Welcome to Orosy (the "App"), a minimalist habit-tracking application designed to help you build positive routines through visual color stacking. By accessing or using Orosy, you agree to be bound by these Terms of Service ("Terms"). Please read them carefully.
+        </p>
+
+        <hr>
+
+        <section>
+            <h2>1. Acceptance of Terms</h2>
+            <p>
+                By downloading, installing, or using Orosy, you agree to comply with and be bound by these Terms. If you do not agree to these Terms, you may not use the App.
+            </p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>2. Description of Service</h2>
+            <p>
+                Orosy provides local-first habit tracking, daily journaling, and visual completion canvas features. The App is designed to operate primarily on-device, meaning your habit history, journal entries, and configurations are stored directly in your device's local storage.
+            </p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>3. User Data and Storage</h2>
+            <ul>
+                <li><strong>Local Storage:</strong> Orosy operates locally using SQLite (Room Database) and SharedPreferences. You are solely responsible for backing up your device and safeguarding the data stored within the App.</li>
+                <li><strong>Loss of Data:</strong> Except as required by applicable law, Orosy is not responsible for any data loss caused by App deletion, device reset, hardware failure, or destructive database migrations.</li>
+                <li><strong>No Cloud Hosting (Default):</strong> Currently, the App stores data entirely on your local device. Any future cloud sync or backup options will be optional and explicitly configured by you.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>4. Prohibited Uses</h2>
+            <p>You agree not to:</p>
+            <ul>
+                <li>Attempt to decompile, reverse-engineer, or extract the source code of the App (except to the extent permitted by applicable open-source licenses).</li>
+                <li>Use the App to store or transmit any unlawful, threatening, abusive, defamatory, or harmful content.</li>
+                <li>Interfere with or disrupt the operation of the App or its underlying systems.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>5. Intellectual Property</h2>
+            <p>
+                All rights, title, and interest in and to the App, including its visual designs, layouts, assets, and code logic (excluding user-generated content and open-source dependencies), are the exclusive property of Orosy and its creators.
+            </p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>6. Disclaimer of Warranties</h2>
+            <p>
+                THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE APP WILL BE ERROR-FREE, SECURE, OR UNINTERRUPTED.
+            </p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>7. Limitation of Liability</h2>
+            <p>
+                TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL OROSY OR ITS CREATORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, OR LOSS OF DATA, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE APP.
+            </p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>8. Governing Law</h2>
+            <p>
+                These Terms shall be governed by and construed in accordance with the laws of your jurisdiction, without regard to its conflict of law principles.
+            </p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>9. Changes to Terms</h2>
+            <p>
+                We reserve the right to modify or update these Terms at any time. We will notify you of any major changes by updating the "Last Updated" date at the top of this document or through an App update. Continued use of the App following any changes constitutes acceptance of those changes.
+            </p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>10. Contact Us</h2>
+            <p>
+                If you have any questions or feedback regarding these Terms, please contact us via the support mechanisms provided within the App.
+            </p>
+        </section>
+
+        <footer>
+            &copy; 2026 Orosy. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
