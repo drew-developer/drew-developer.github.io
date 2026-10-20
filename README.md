@@ -4,6 +4,7 @@
 High-performance applications built with Kotlin, Rust, TypeScript, and modern frameworks.
 
 ## 🌐 Open Source
+- **📖 kfx_converter**: High-performance, cross-platform native EPUB to Amazon KFX converter and Kindle toolchain bringing Word Wise to sideloaded books without proprietary OS dependencies. Built with **Rust**. [GitHub](https://github.com/hwanjongyu/kfx_converter)
 - **🛠️ Stitch-to-Compose Conversion Loop**: A specialized AI skill that enables coding agents to programmatically convert Google Stitch mockups into Jetpack Compose code with a self-healing feedback loop. Built with **Python**. [GitHub](https://github.com/hwanjongyu/skills)
 - **💻 LogAnalyzer**: High Performance Desktop Log Analysis application. Built with **Electron, React, and TypeScript**. [GitHub](https://github.com/hwanjongyu/LogAnalyzer)
 - **⚡ LogAnalysis**: Ultra-fast, cross-platform log analysis tool designed for handling large log files. Built with **Rust, Tauri, and React**. [GitHub](https://github.com/hwanjongyu/LogAnalysis)

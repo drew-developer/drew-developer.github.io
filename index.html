@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="description"
         content="Portfolio of Drew Developer - High-quality applications built with modern technologies.">
+    <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
@@ -21,10 +22,10 @@
             <nav>
                 <div class="logo">Drew Developer</div>
                 <div class="nav-links">
-                    <a href="#portfolio">Apps</a>
-                    <a href="#about">About</a>
+                    <a href="#opensource">Open Source</a>
+                    <a href="#apps">Apps</a>
                     <a href="https://github.com/hwanjongyu" target="_blank">GitHub</a>
-                    <a href="https://www.linkedin.com/in/drewyu" target="_blank">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/hwanjongyu" target="_blank">LinkedIn</a>
                 </div>
             </nav>
         </div>
@@ -32,16 +33,36 @@
 
     <section class="hero">
         <div class="container">
+            <div class="hero-badge"><span class="status-dot"></span> Available for new opportunities</div>
             <h1>Crafting Modern Software Experiences</h1>
             <p>High-performance applications built with Kotlin, Rust, TypeScript, and modern frameworks.</p>
-            <a href="#portfolio" class="cta-button">View Projects</a>
+            <div class="hero-actions">
+                <a href="#opensource" class="cta-button">View Projects <i class="fa-solid fa-arrow-down"></i></a>
+                <a href="https://github.com/hwanjongyu" target="_blank" class="cta-button cta-secondary"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
         </div>
     </section>
 
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2 class="section-title">Open Source</h2>
+            <div class="section-header" id="opensource">
+                <h2 class="section-title">Open Source</h2>
+                <p class="section-subtitle">Featured libraries, desktop tools, and developer utilities</p>
+            </div>
             <div class="grid">
+                <!-- kfx_converter -->
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                        <h3>kfx_converter</h3>
+                        <p>High-performance, cross-platform native EPUB to Amazon KFX converter and Kindle toolchain bringing Word Wise to sideloaded books without proprietary OS dependencies. Built with <span class="badge badge-rust">Rust</span>.</p>
+                        <div class="card-links">
+                            <a href="https://github.com/hwanjongyu/kfx_converter" target="_blank" class="btn-text"><i
+                                    class="fa-brands fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Stitch-to-Compose Conversion Loop -->
                 <div class="card">
                     <div class="card-content">
@@ -143,9 +164,10 @@
                 </div>
             </div>
 
-            <h2 class="section-title" style="margin-top: 80px;">My Apps</h2>
-
-            <h3 class="subsection-title"><i class="fa-brands fa-google-play"></i> Android Apps</h3>
+            <div class="section-header" id="apps" style="margin-top: 72px;">
+                <h2 class="section-title">My Apps</h2>
+                <p class="section-subtitle">Native Android applications published on Google Play</p>
+            </div>
             <div class="grid">
 
                 <!-- OpenStream -->
